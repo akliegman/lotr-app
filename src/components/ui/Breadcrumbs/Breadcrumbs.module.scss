@@ -1,0 +1,12 @@
+@import "../../../styles/styles";
+
+.Container {
+  @include flex(row, flex-start, center, $spacing-1);
+  @include body-small;
+  color: lighten($color-blue, 37.5%);
+
+  .Separator {
+    opacity: 0.5;
+    margin-left: $spacing-1;
+  }
+}

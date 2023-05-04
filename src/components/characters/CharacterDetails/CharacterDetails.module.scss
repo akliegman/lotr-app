@@ -1,0 +1,14 @@
+@import "../../../styles/styles";
+
+.Container {
+  @include flex(column, flex-start, stretch, $spacing-10);
+  margin-top: $spacing-6;
+
+  .Quotes {
+    @include flex(column, flex-start, stretch, $spacing-6);
+  }
+}
+
+.ShowAll {
+  align-self: center;
+}

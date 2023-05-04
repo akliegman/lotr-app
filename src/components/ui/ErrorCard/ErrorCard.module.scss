@@ -1,0 +1,26 @@
+@import "../../../styles/styles";
+
+.Card {
+  @include card(small);
+  @include flex(row, flex-start, center, $spacing-4);
+  background-color: $color-red;
+  min-width: 50vw;
+  max-width: 768px;
+  width: 100%;
+
+  .Icon {
+    flex: 0 0 auto;
+    width: 32px;
+    height: 32px;
+    opacity: 0.5;
+  }
+
+  .Message {
+    @include h5;
+    color: $color-white;
+
+    .Label {
+      opacity: 0.75;
+    }
+  }
+}

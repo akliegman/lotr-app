@@ -1,0 +1,74 @@
+@mixin card($size: medium) {
+  background-color: $color-white;
+  @include container(medium);
+  @include transition(all);
+  box-shadow: $box-shadow;
+  &:hover {
+    box-shadow: $box-shadow-darkened;
+    background-color: lighten($color-orange-light, 20%);
+  }
+
+  @if $size == large {
+    @include container(large);
+    border-radius: $border-radius-large;
+  } @else if $size == medium {
+    @include container(medium);
+    border-radius: $border-radius-large;
+  } @else if $size == small {
+    @include container(small);
+    border-radius: $border-radius;
+  }
+}
+
+@mixin button {
+  height: 36px;
+  width: fit-content;
+  @include flex(row, center, center);
+  @include transition(all);
+  border-radius: $border-radius;
+  background-color: rgba($color-red-light, 0.2);
+  color: darken($color-red, 15%);
+  outline: none;
+  border: none;
+  padding: 0 $spacing-4;
+  font-family: $font-family-body;
+  cursor: pointer;
+
+  &:hover,
+  &:active,
+  &:focus {
+    background-color: rgba($color-red-light, 0.3);
+    color: darken($color-red, 20%);
+  }
+}
+
+@mixin icon-button {
+  height: 36px;
+  width: 36px;
+  @include flex(row, center, center);
+  @include transition(all);
+  border-radius: 50%;
+  background-color: rgba($color-red-light, 0.2);
+  color: darken($color-red, 15%);
+  outline: none;
+  border: none;
+  padding: $spacing-2;
+  cursor: pointer;
+
+  svg {
+    path {
+      fill: darken($color-red, 15%);
+    }
+  }
+
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: rgba($color-red, 0.25);
+    svg {
+      path {
+        fill: darken($color-red, 20%);
+      }
+    }
+  }
+}

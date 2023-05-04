@@ -1,0 +1,14 @@
+@import "../../../styles/styles";
+
+.Container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(darken($color-red, 47.5%), 0.9);
+  backdrop-filter: blur(6px);
+  z-index: 999;
+  @include flex(column, center, center, $spacing-4);
+  @include container(medium);
+}

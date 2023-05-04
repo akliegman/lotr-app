@@ -1,0 +1,22 @@
+@import "../../../styles/styles";
+
+.Container {
+  @include container(medium);
+
+  .Logo {
+    @include flex(column, flex-start, flex-start);
+
+    .Title {
+      @include h1($font-size: 30px, $line-height: 1);
+      color: $color-orange;
+    }
+
+    .Subtitle {
+      @include h2(
+        $font-size: $font-size-small,
+        $line-height: $line-height-small
+      );
+      color: lighten($color-orange, 12.5%);
+    }
+  }
+}

@@ -1,0 +1,20 @@
+@import "../../styles/styles";
+
+.Button {
+  @include card(large);
+  @include flex(column, center, center, $spacing-2);
+
+  .Icon {
+    width: 100%;
+    max-width: 60px;
+  }
+
+  .Name {
+    @include h2;
+    margin-top: $spacing-1;
+  }
+
+  .Code {
+    @include inline-code;
+  }
+}

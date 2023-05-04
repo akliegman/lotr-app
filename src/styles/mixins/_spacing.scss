@@ -1,0 +1,11 @@
+@mixin container($size: medium) {
+  max-width: 100%;
+
+  @if $size == large {
+    padding: $spacing-9 $spacing-8;
+  } @else if $size == medium {
+    padding: $spacing-4 $spacing-4;
+  } @else if $size == small {
+    padding: $spacing-3 $spacing-3;
+  }
+}

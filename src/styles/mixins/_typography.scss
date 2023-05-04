@@ -1,0 +1,137 @@
+@mixin h1(
+  $font-family: $font-family-display,
+  $font-size: $font-size-h1,
+  $font-weight: $font-weight-h1,
+  $line-height: $line-height-h1,
+  $color: $color-blue
+) {
+  font-family: $font-family;
+  font-size: $font-size;
+  font-weight: $font-weight;
+  line-height: $line-height;
+  color: $color;
+}
+
+@mixin h2(
+  $font-family: $font-family-display,
+  $font-size: $font-size-h2,
+  $font-weight: $font-weight-h2,
+  $line-height: $line-height-h2,
+  $color: $color-blue
+) {
+  font-family: $font-family;
+  font-size: $font-size;
+  font-weight: $font-weight;
+  line-height: $line-height;
+  color: $color;
+}
+
+@mixin h3(
+  $font-family: $font-family-display,
+  $font-size: $font-size-h3,
+  $font-weight: $font-weight-h3,
+  $line-height: $line-height-h3,
+  $color: $color-blue
+) {
+  font-family: $font-family;
+  font-size: $font-size;
+  font-weight: $font-weight;
+  line-height: $line-height;
+  color: $color;
+}
+
+@mixin h4(
+  $font-family: $font-family-display,
+  $font-size: $font-size-h4,
+  $font-weight: $font-weight-h4,
+  $line-height: $line-height-h4,
+  $color: $color-blue
+) {
+  font-family: $font-family;
+  font-size: $font-size;
+  font-weight: $font-weight;
+  line-height: $line-height;
+  color: $color;
+}
+
+@mixin h5(
+  $font-family: $font-family-display,
+  $font-size: $font-size-h5,
+  $font-weight: $font-weight-h5,
+  $line-height: $line-height-h5,
+  $color: $color-blue
+) {
+  font-family: $font-family;
+  font-size: $font-size;
+  font-weight: $font-weight;
+  line-height: $line-height;
+  color: $color;
+}
+
+@mixin h6(
+  $font-family: $font-family-display,
+  $font-size: $font-size-h6,
+  $font-weight: $font-weight-h6,
+  $line-height: $line-height-h6,
+  $color: $color-blue
+) {
+  font-family: $font-family;
+  font-size: $font-size;
+  font-weight: $font-weight;
+  line-height: $line-height;
+  color: $color;
+}
+
+@mixin body(
+  $font-family: $font-family-body,
+  $font-size: $font-size-body,
+  $font-weight: $font-weight-body,
+  $line-height: $line-height-body
+) {
+  font-family: $font-family;
+  font-size: $font-size;
+  font-weight: $font-weight;
+  line-height: $line-height;
+}
+
+@mixin body-small(
+  $font-family: $font-family-body,
+  $font-size: $font-size-small,
+  $font-weight: $font-weight-small,
+  $line-height: $line-height-small
+) {
+  font-family: $font-family;
+  font-size: $font-size;
+  font-weight: $font-weight;
+  line-height: $line-height;
+}
+
+@mixin code(
+  $font-family: $font-family-code,
+  $font-size: $font-size-body,
+  $font-weight: $font-weight-body,
+  $line-height: $line-height-body,
+  $color: $color-blue
+) {
+  font-family: $font-family;
+  font-size: $font-size;
+  font-weight: $font-weight;
+  line-height: $line-height;
+  color: $color;
+}
+
+@mixin inline-code {
+  border-radius: $border-radius;
+  padding: $spacing-1 $spacing-3;
+  background-color: rgba($color-blue-light, 0.1);
+}
+
+@mixin link {
+  text-decoration: none;
+  color: darken($color-red, 15%);
+  @include transition(all);
+
+  &:hover {
+    color: darken($color-red, 20%);
+  }
+}

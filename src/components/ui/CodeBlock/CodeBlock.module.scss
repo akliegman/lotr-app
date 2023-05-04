@@ -1,0 +1,17 @@
+@import "../../../styles/styles";
+
+.Container {
+  overflow: hidden;
+  pre {
+    @include container(small);
+    border-radius: $border-radius;
+    background-color: rgba($color-blue-light, 0.1);
+    @include code;
+    font-size: $font-size-small;
+    max-width: 100%;
+    word-wrap: break-word;
+    word-break: break-all;
+    white-space: pre-wrap;
+    overflow-y: scroll;
+  }
+}

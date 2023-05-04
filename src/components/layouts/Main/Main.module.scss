@@ -1,0 +1,11 @@
+@import "../../../styles/styles";
+
+.Container {
+  width: 100%;
+  min-height: 100vh;
+  overflow-y: scroll;
+
+  @include mobile {
+    min-height: calc(100vh - 96px);
+  }
+}

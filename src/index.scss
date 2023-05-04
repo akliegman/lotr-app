@@ -1,0 +1,20 @@
+@import "./styles/reset";
+@import "./styles/styles";
+
+body {
+  font-size: $font-size-body;
+  font-family: $font-family-body;
+  font-weight: $font-weight-body;
+  line-height: $line-height-body;
+  color: lighten($color-blue, 15%);
+  background-color: lighten($color-yellow-light, 14%);
+}
+
+a {
+  @include link;
+}
+
+code,
+pre {
+  @include code;
+}

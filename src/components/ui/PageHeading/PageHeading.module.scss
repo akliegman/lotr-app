@@ -1,0 +1,7 @@
+@import "../../../styles/styles";
+
+.Container {
+  .Title {
+    @include h2;
+  }
+}

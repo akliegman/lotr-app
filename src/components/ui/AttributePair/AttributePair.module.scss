@@ -1,0 +1,32 @@
+@import "../../../styles/styles";
+
+.Container {
+  @include flex(column, flex-start, flex-start);
+
+  &.FullWidth {
+    grid-column: span 2;
+    @include tablet {
+      grid-column: span 1;
+    }
+  }
+
+  .Label {
+    @include h4;
+  }
+  .Value {
+    @include body;
+    @include inline-flex(row, flex-start, center);
+    min-height: 32px;
+    > * {
+      @include inline-flex(row, flex-start, center, $spacing-1);
+    }
+    svg {
+      width: 24px;
+      opacity: 0.75;
+    }
+    code {
+      @include inline-code;
+      font-size: $font-size-small;
+    }
+  }
+}

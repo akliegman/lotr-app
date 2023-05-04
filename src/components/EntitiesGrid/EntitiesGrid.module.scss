@@ -1,0 +1,9 @@
+@import "../../styles/styles";
+
+.Container {
+  @include grid($columns: 2, $gap: $spacing-6);
+
+  @include mobile {
+    @include grid($columns: 1, $gap: $spacing-6);
+  }
+}
