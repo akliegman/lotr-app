@@ -1,46 +1,164 @@
-# Getting Started with Create React App
+# lotr-app (alias: Adam_Kliegman_Project)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is repository that contains the code for the LOTR API Explorer App, publically available on [https://lotr-app.herokuapp.com/](https://lotr-app.herokuapp.com/).
 
-## Available Scripts
+This is an app that demos using the `movies`, `characters`, and `quotes` models from [The One API](https://the-one-api.dev/) with an interface to allow developers to browse the models and read details about each entity within.
 
-In the project directory, you can run:
+## Getting Started
 
-### `npm start`
+### Prerequisites
 
-Runs the app in the development mode.\
-Open [http://localhost:8888](http://localhost:8888) to view it in the browser.
+- Node.js (version 19 or later - this project uses Node v19.7.0)
+- NPM (version 9 or later - this project uses NPM v9.5.0)
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+_Older versions may work, but have not been tested._
 
-### `npm test`
+### Installation
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1. Clone the repository to your local machine.
 
-### `npm run build`
+In terminal:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```
+git clone https://github.com/akliegman/kliegmandesign
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+2. Install server dependencies.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+In terminal:
 
-### `npm run eject`
+```
+# from root directory
+npm install
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+3. Install client dependencies.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+In terminal:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+```
+# from root directory
+cd client
+npm install
+```
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+4. Create .env file.
 
-## Learn More
+Create a `.env` or `.env.local` file in the root directory, with the following content:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```
+PORT=3001
+ENV=local
+CORS_ORIGINS=http://localhost:3000,http://localhost:3001
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+The rest of the envars required to run the app should be provided by @akliegman.
+
+### Running the app
+
+1. Start the server.
+
+In terminal:
+
+```
+# from root directory
+npm start
+```
+
+_or (if you want live updates)_
+
+```
+# from root directory
+npm run dev
+```
+
+The server should be running on **localhost:3001**
+
+2. Start the client.
+
+From a new terminal:
+
+```
+# from root directory
+npm run client
+```
+
+_or (if you want to run from client directory)_
+
+```
+# from root directory
+cd client
+npm start
+```
+
+The client should be running on **localhost:3000**
+
+### Additional terminal commands
+
+1. Lint the client using ESLint.
+
+```
+# from root directory
+cd client
+npm run lint
+
+# or, if you want auto fixing:
+npm run lint:fix
+```
+
+2. Test the client using React-Testing-Library.
+
+Note: this command runs any time you open a new PR.
+
+```
+# from root directory
+cd client
+npm run test
+```
+
+3. Build the client.
+
+```
+# from root directory
+cd client
+npm run build
+```
+
+## Deployment
+
+From terminal:
+
+```
+# from root directory
+heroku login # should prompt browser login
+git push heroku main
+```
+
+## TODOs
+
+- Server-side tests.
+- Full coverage for client side tests.
+- Proptypes, or soome methodology to mimic TypeScript
+
+## Built With
+
+- [React](https://reactjs.org/) - A JavaScript library for building user interfaces.
+- [Express](https://expressjs.com/) - A fast, unopinionated, minimalist web framework for Node.js.
+- [TypeScript](https://www.typescriptlang.org/) - A typed superset of JavaScript that compiles to plain JavaScript.
+- [Node.js](https://nodejs.org/) - A JavaScript runtime built on Chrome's V8 JavaScript engine.
+- [PostgreSQL](https://www.postgresql.org/) - A powerful, open source object-relational database system.
+- [LESS](http://lesscss.org/) - A dynamic stylesheet language that can be compiled into CSS.
+- [React Testing Library](https://testing-library.com/docs/react-testing-library/intro/) - A testing utility for React that encourages good testing practices.
+
+### Public With
+
+- [Heroku](https://www.heroku.com/) - A cloud platform that lets you build, deliver, monitor, and scale apps.
+- [Cloudflare](https://www.cloudflare.com/) - A global cloud platform that provides a range of network services to businesses of all sizes.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE.txt) file for details.
+
+## Authors
+
+- [Adam Kliegman](https://github.com/akliegman) - All of the work.
