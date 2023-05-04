@@ -1,9 +1,9 @@
 @import "../../styles/styles";
 
 .Container {
-  @include grid($columns: 3, $gap: $spacing-8);
+  @include grid($columns: 3, $gap: $spacing-7);
 
-  @include mobile {
+  @include tablet {
     @include grid($columns: 1, $gap: $spacing-6);
   }
 }
