@@ -124,6 +124,11 @@
   border-radius: $border-radius;
   padding: $spacing-1 $spacing-3;
   background-color: rgba($color-blue-light, 0.1);
+  display: block;
+  @include mobile {
+    font-size: $font-size-small;
+    padding: $spacing-1 $spacing-1;
+  }
 }
 
 @mixin link {

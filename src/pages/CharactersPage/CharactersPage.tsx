@@ -39,9 +39,13 @@ export const CharactersPage: React.FC = () => {
       />
       <PageTitle
         title={toTitleCase(model)}
+        titleSubscript={`(${data.length.toLocaleString("en-US")} total - page ${
+          pagination.page
+        } of ${pagination.pages})`}
         subtitle={location.pathname}
         withMargin
       />
+
       <EntitiesGrid model={model as ModelEnum} data={paginatedData} />
       {pagination.total > pagination.limit && (
         <Pagination model={model as ModelEnum} pagination={pagination} />

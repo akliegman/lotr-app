@@ -25,8 +25,8 @@ export const Pagination: React.FC<PaginationProps> = ({
   model,
   pagination,
 }) => {
-  let [params, setParams] = useSearchParams();
-  let page = params.get("page");
+  const [params, setParams] = useSearchParams();
+  const page = params.get("page");
   const navigate = useNavigate();
   const location = useLocation();
   const dispatch = useAppDispatch();

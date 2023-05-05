@@ -9,6 +9,15 @@
 
   .Title {
     @include h1;
+    @include inline-flex(row, flex-start, baseline, $spacing-2);
+    .Subscript {
+      @include h4;
+      color: lighten($color-blue, 20%);
+    }
+
+    @include mobile {
+      @include inline-flex(column, flex-start, flex-start, 0);
+    }
   }
   .Subtitle {
     @include inline-code;

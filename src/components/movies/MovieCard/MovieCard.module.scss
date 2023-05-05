@@ -3,7 +3,7 @@
 .Button {
   @include card(medium);
   @include flex(row, flex-start, center, $spacing-3);
-
+  overflow: hidden;
   .Rating {
     flex: 0 0 auto;
     width: 100%;
@@ -34,13 +34,20 @@
 
   .Name {
     @include h3;
-    margin-bottom: $spacing-1;
+  }
+
+  .Title {
+    overflow: hidden;
+    @include flex(column, flex-start, flex-start, 0);
   }
 
   .Code {
     @include inline-code;
     padding-left: $spacing-1;
     padding-right: $spacing-1;
-    font-size: $font-size-tiny;
+    font-size: $font-size-tiny !important;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
   }
 }

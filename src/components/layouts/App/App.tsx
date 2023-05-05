@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { Routes, Route, useLocation } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 
 import { useAppDispatch } from "../../../hooks/useAppDispatch";
 import { moviesActions } from "../../../store/slice/movies/moviesSlice";
@@ -16,11 +16,6 @@ import styles from "./App.module.scss";
 
 const App: React.FC = () => {
   const dispatch = useAppDispatch();
-  const { pathname } = useLocation();
-
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, [pathname]);
 
   useEffect(() => {
     dispatch(moviesActions.getAll());

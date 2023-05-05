@@ -1,5 +1,5 @@
 import { render, screen, waitFor } from "@testing-library/react";
-import { MemoryRouter, useLocation } from "react-router-dom";
+import { MemoryRouter } from "react-router-dom";
 import configureMockStore from "redux-mock-store";
 import { Provider } from "react-redux";
 
@@ -8,6 +8,8 @@ import { useAppSelector } from "../../../hooks/useAppSelector";
 import { moviesActions } from "../../../store/slice/movies/moviesSlice";
 import { charactersActions } from "../../../store/slice/characters/charactersSlice";
 import { quotesActions } from "../../../store/slice/quotes/quotesSlice";
+import { useScrollTop } from "../../../hooks/useScrollTop";
+
 import App from "./App";
 
 import { mockData } from "../../../setupTests";
@@ -17,6 +19,7 @@ jest.mock("../../../hooks/useAppSelector");
 jest.mock("../../../store/slice/movies/moviesSlice");
 jest.mock("../../../store/slice/characters/charactersSlice");
 jest.mock("../../../store/slice/quotes/quotesSlice");
+jest.mock("../../../hooks/useScrollTop");
 
 const mockStore = configureMockStore([]);
 
@@ -24,10 +27,7 @@ describe("App", () => {
   let store: ReturnType<typeof mockStore>;
 
   beforeAll(() => {
-    Object.defineProperty(window, "scrollTo", {
-      value: jest.fn(),
-      writable: true,
-    });
+    (useScrollTop as jest.Mock).mockReturnValue(null);
   });
   beforeEach(() => {
     store = mockStore(mockData);
